@@ -73,7 +73,7 @@ const MobileNavigation = () => {
 
       <div className="flex items-center justify-between">
         <Button asChild variant="ghost" size="sm">
-          <Link href="/">
+          <Link href="https://github.com/AbhishekSinghDev/devquick-ui.git">
             <FaGithub className="h-4 w-4 lg:h-5 lg:w-5" />
           </Link>
         </Button>
