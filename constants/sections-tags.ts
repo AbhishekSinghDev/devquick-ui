@@ -1,6 +1,6 @@
-import { SectionTagsType } from "@/types/section-tag";
+import { TabsTagType } from "@/types/tags.type";
 
-const SectionTags: Array<SectionTagsType> = [
+const SectionTags: Array<TabsTagType> = [
   {
     id: "1",
     tag: "Header",

@@ -45,7 +45,7 @@ const Footer = () => {
                 Abhishek Singh
               </Link>
             </Button>
-            <div className="hidden sm:block">|</div>
+            <div>|</div>
             <Button asChild variant="link">
               <Link
                 href="https://www.linkedin.com/in/himanshu-dutt-77k"

@@ -1,4 +1,4 @@
-export interface SectionTagsType {
+export interface TabsTagType {
   id: string;
   tag: string;
   imageUrl: string;

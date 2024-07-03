@@ -16,8 +16,11 @@ const page = () => {
         <SearchCategories />
       </div>
       <div className="flex items-center justify-start mt-10">
-        <Tabs defaultValue="sections" className="w-full">
-          <TabsList>
+        <Tabs
+          defaultValue="sections"
+          className="w-full text-center sm:text-start"
+        >
+          <TabsList className="ml-4">
             <TabsTrigger
               value="sections"
               id="section"
