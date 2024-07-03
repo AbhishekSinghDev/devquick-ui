@@ -11,7 +11,7 @@ const Hero = () => {
   return (
     <main className="max-h-80 my-auto h-80 flex flex-col items-center justify-center space-y-4">
       <div>
-        <Announcement message="Introducing hero sections" />
+        <Announcement message="Introducing devquick/ui" />
       </div>
 
       <div className="space-y-2">

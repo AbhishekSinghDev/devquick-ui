@@ -67,7 +67,7 @@ const MobileNavigation = () => {
         )}
       >
         <p className="text-gray-400 text-xs whitespace-nowrap">
-          Search documentation...
+          Search devquick/ui...
         </p>
       </div>
 

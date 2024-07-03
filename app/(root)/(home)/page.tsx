@@ -18,9 +18,27 @@ const page = () => {
       <div className="flex items-center justify-start mt-10">
         <Tabs defaultValue="sections" className="w-full">
           <TabsList>
-            <TabsTrigger value="sections">Sections</TabsTrigger>
-            <TabsTrigger value="components">Components</TabsTrigger>
-            <TabsTrigger value="popular-clones">Popular Clones</TabsTrigger>
+            <TabsTrigger
+              value="sections"
+              id="section"
+              className="text-xs sm:text-sm"
+            >
+              Sections
+            </TabsTrigger>
+            <TabsTrigger
+              value="components"
+              id="components"
+              className="text-xs sm:text-sm"
+            >
+              Components
+            </TabsTrigger>
+            <TabsTrigger
+              value="popular-clones"
+              id="clones"
+              className="text-xs sm:text-sm"
+            >
+              Popular Clones
+            </TabsTrigger>
           </TabsList>
           <TabsContent value="sections" className="w-full">
             <SectionsTab />
