@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/context/theme-provider";
 
 import Footer from "@/components/shared/footer";
 import Header from "@/components/shared/header";
+import { Toaster } from "@/components/ui/toaster";
 
 interface ProviderProps {
   children: React.ReactNode;
@@ -22,6 +23,7 @@ const Providers: React.FC<ProviderProps> = ({ children }) => {
       <Header />
       {children}
       <Footer />
+      <Toaster />
     </ThemeProvider>
   );
 };

@@ -17,10 +17,11 @@ import { cn } from "@/lib/utils";
 
 import { headerNavigation } from "@/constants/header-navigation.constant";
 import { HeaderNavType } from "@/types/header.type";
-import Logo from "@/public/logo/devquickui-icon.png";
 
 import { FaBarsStaggered } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
+
+import Logo from "@/public/logo/devquickui-icon.png";
 
 const MobileNavigation = () => {
   return (
@@ -34,7 +35,7 @@ const MobileNavigation = () => {
         <SheetContent side="left">
           <SheetHeader>
             <SheetTitle asChild>
-              <div className="flex items-center gap-3">
+              <Link href="/" className="flex items-center gap-3">
                 <Image
                   src={Logo}
                   alt="devquick/ui"
@@ -43,7 +44,7 @@ const MobileNavigation = () => {
                   className="h-5 w-5"
                 />
                 <h1 className="font-bold">devquick/ui</h1>
-              </div>
+              </Link>
             </SheetTitle>
           </SheetHeader>
           <div className="pl-8">
