@@ -5,8 +5,6 @@ import Image from "next/image";
 import ExploreRecordType from "@/types/header-record.type";
 import PreviewCodeView from "./preview-code-view";
 
-import HeaderOne from "@/template/sections/header/header-1.section";
-
 interface ExploreGalleryProps {
   ExploreRecord: Array<ExploreRecordType>;
 }
@@ -31,7 +29,11 @@ const ExploreGallery: React.FC<ExploreGalleryProps> = ({ ExploreRecord }) => {
             {item.name}
           </p>
           <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-            <PreviewCodeView preview={<HeaderOne />} code={item.code} />
+            <PreviewCodeView
+              preview={<item.element />}
+              code={item.code}
+              installationCommands={item.installationCommands}
+            />
           </div>
         </div>
       ))}

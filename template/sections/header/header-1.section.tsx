@@ -22,7 +22,7 @@ const HeaderOne = () => {
   ];
 
   return (
-    <header className="max-w-5xl mx-auto">
+    <header className="max-w-5xl mx-auto my-4">
       <div className="px-4">
         <div className="flex items-center justify-between">
           <div className="flex shrink-0">

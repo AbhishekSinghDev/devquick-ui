@@ -5,7 +5,7 @@ interface PreviewProps {
 }
 
 const Preview: React.FC<PreviewProps> = ({ Element }) => {
-  return <div className="p-2">{Element}</div>;
+  return <div className="p-2 border rounded-2xl">{Element}</div>;
 };
 
 export default Preview;

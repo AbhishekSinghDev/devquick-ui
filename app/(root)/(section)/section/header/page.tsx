@@ -6,7 +6,7 @@ import ExploreGallery from "@/components/shared/explore-gallery";
 const page = () => {
   return (
     <div className="max-w-screen-2xl mx-auto px-4">
-      <div className="my-10">
+      <div className="py-10">
         <h1 className="text-4xl font-bold">Explore Headers</h1>
       </div>
       <div>

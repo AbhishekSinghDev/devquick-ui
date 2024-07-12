@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { use, useState } from "react";
 
 import {
   Dialog,
@@ -26,14 +26,21 @@ import { useToast } from "@/components/ui/use-toast";
 interface PreviewCodeViewProps {
   preview: React.ReactElement;
   code: string;
+  installationCommands: Array<string>;
 }
 
-const PreviewCodeView: React.FC<PreviewCodeViewProps> = ({ preview, code }) => {
+const PreviewCodeView: React.FC<PreviewCodeViewProps> = ({
+  preview,
+  code,
+  installationCommands,
+}) => {
   const { toast } = useToast();
   const [isCopied, setIsCopied] = useState<boolean>(false);
+  const [isCommandCopied, setIsCommandCopied] = useState<number | null>(null);
 
   setTimeout(() => {
     setIsCopied(false);
+    setIsCommandCopied(null);
   }, 1000);
 
   return (
@@ -95,8 +102,51 @@ const PreviewCodeView: React.FC<PreviewCodeViewProps> = ({ preview, code }) => {
               </TabsTrigger>
             </TabsList>
             <TabsContent value="preview" className="mt-4" asChild>
-              <div className="max-w-full rounded-3xl border">
+              <div className="max-w-full">
                 <Preview Element={preview} />
+                <div className="my-4 space-y-3 p-2">
+                  <div>
+                    <p className="text-xl font-bold">Installation</p>
+                    <p className="text-xs text-gray-400">
+                      These are the required shadcn components to be added in
+                      order to error free render.
+                    </p>
+                  </div>
+                  <ul className="my-2">
+                    {installationCommands.map((command, index) => (
+                      <li
+                        key={index}
+                        className="cursor-pointer my-4"
+                        onClick={() => {
+                          navigator.clipboard.writeText(command);
+                          setIsCommandCopied(index);
+                          toast({
+                            title: "Command copied successfully.",
+                          });
+                        }}
+                      >
+                        <Button
+                          variant="secondary"
+                          size="sm"
+                          className="flex items-start"
+                          asChild
+                        >
+                          <div className="flex items-center justify-between font-medium">
+                            <p className="text-xs overflow-x-scroll no-scrollbar line-clamp-1 w-[90%]">
+                              {command}
+                            </p>
+
+                            {isCommandCopied === index ? (
+                              <FaCheck />
+                            ) : (
+                              <FaCopy />
+                            )}
+                          </div>
+                        </Button>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </TabsContent>
             <TabsContent value="code" asChild>
