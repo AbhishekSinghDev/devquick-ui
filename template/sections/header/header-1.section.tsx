@@ -23,7 +23,7 @@ const HeaderOne = () => {
 
   return (
     <header className="max-w-5xl mx-auto my-4">
-      <div className="px-4">
+      <div className="px-2 sm:px-4">
         <div className="flex items-center justify-between">
           <div className="flex shrink-0">
             <a className="flex items-center justify-center gap-2" href="#">
